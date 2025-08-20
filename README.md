@@ -6,16 +6,22 @@
 
 ## How to run the app
 
-Install dependencies:
+1. Install dependencies:
    bash
    npm install
    npm run build
-   
-
-Open html file in web browser
+2. Open html file in web browser
 
 ## Structure:
 calculator/
-├── main.js             # app logic + ESLint (w/ prettier) + webpack config 
-└── index.html          # html markup + css styles
+├── dist/
+    ├── bundle.js
+    └── index.html
+├── main.js             # app logic + ESLint (w/ prettier) + webpack config
+├── index.html          # html markup + css styles
+├── package.json
+├── package-lock.json
+├── webpack.config.js
+└── README.md
 </pre>
+
