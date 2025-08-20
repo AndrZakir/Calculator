@@ -1,3 +1,4 @@
+<pre>
 # Calculator App
 
 ## Task  
@@ -6,14 +7,15 @@
 ## How to run the app
 
 Install dependencies:
-   ```bash
+   bash
    npm install
    npm run build
-   ```
+   
 
 Open html file in web browser
 
 ## Structure:
 calculator/
-├── main.js             # app logic + ESLint (w/ prettier) + webpack config
+├── main.js             # app logic + ESLint (w/ prettier) + webpack config 
 └── index.html          # html markup + css styles
+</pre>
