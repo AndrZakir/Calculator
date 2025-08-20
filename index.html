@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="main.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #000000;
+            color: #fff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.light-theme {
+            background-color: #f4f4f4;
+            color: #000;
+        }
+
+        body.light-theme .screen {
+            background-color: #fff;
+            color: #000;
+        }
+
+        body.light-theme .buttons {
+            border-top: 2px solid black;
+        }
+        body.light-theme .buttons button {
+            background-color: #e0e0e0;
+            color: #000;
+        }
+
+        body.light-theme .buttons .equalSign {
+            background-color: rgb(238, 179, 16);
+        }
+
+        body.light-theme .buttons .allClear {
+            color: red;
+        }
+
+        body.light-theme .buttons .actionKey {
+            color: rgb(238, 179, 16);
+        }
+
+        body.light-theme .buttons button:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        body.light-theme .buttons button:active {
+            background-color: rgba(209, 209, 209, 0.4);
+        }
+
+        body.light-theme .buttons .equalSign:hover {
+            background-color: rgb(248, 200, 69);
+        }
+
+        body.light-theme .buttons .equalSign:active {
+            background-color: rgb(223, 173, 37);
+        }
+
+        .calculator {
+            border: 2px solid white;
+            border-radius: 25px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+        }
+
+        body.light-theme .calculator {
+            border: 2px solid black;
+        }
+
+        .screen {
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            font-size: 48px;
+            height: 150px;
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            text-align: right;
+            padding-right: 20px;
+            padding-left: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        button {
+            height: 75px;
+            border-radius: 50%;
+            border: 1px solid #948787;
+            background-color: #18181a;
+            font-size: 32px;
+            color: #f1f1f1;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        button:active {
+            background-color: rgba(209, 209, 209, 0.4);
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            padding: 10px;
+            border-top: 2px solid white;
+        }
+
+        .equalSign {
+            background-color: rgb(67, 114, 22);            
+        }
+
+        .equalSign:hover {
+            background-color: rgb(100, 145, 59);
+        }
+
+        .equalSign:active {
+            background-color: rgb(87, 126, 50);
+        }
+
+        .allClear {
+            color: red;
+        }
+
+        .actionKey {
+            color: rgb(67, 114, 22);  
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="screen" disabled />
+        <div class="buttons">
+            <button class="theme-toggle">☀</button>
+            <button class="allClear" value="allClear">AC</button>
+            
+            <button class="percent actionKey" value="%">%</button>
+            <button class="operator actionKey" value="/">÷</button>
+
+            <button value="7">7</button>
+            <button value="8">8</button>
+            <button value="9">9</button>
+            <button class="operator actionKey" value="*">×</button>
+
+            <button value="4">4</button>
+            <button value="5">5</button>
+            <button value="6">6</button>
+            <button class="operator actionKey" value="-">-</button>
+
+            <button value="1">1</button>
+            <button value="2">2</button>
+            <button value="3">3</button>
+            <button class="operator actionKey" value="+">+</button>
+
+            <button class="plusMinus actionKey" value="+/-">±</button>
+            <button value="0">0</button>
+            <button class="decimal actionKey" value=".">.</button>
+            <button class="equalSign operator" value="=">=</button>
+
+        </div>
+    </div>
+</body>
+</html>
