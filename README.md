@@ -21,7 +21,7 @@ calculator/
 ├── index.html          # html markup + css styles
 ├── package.json
 ├── package-lock.json
-├── webpack.config.js
-└── README.md
+└── webpack.config.js
 </pre>
+
 
